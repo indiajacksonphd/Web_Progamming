@@ -1,9 +1,9 @@
-#Jeopardy Game - README
+# Jeopardy Game - README #
 This repository contains the code for a Jeopardy game web application. The game allows users to register, play Jeopardy, and track their scores. Here's a guide on how to use the application:
 
 <br />
 
-#Getting Started
+# Getting Started #
 1) Start by accessing the application at localhost/Final_2/login.php.
 2) If you are a new user, click on the registration link to create an account.
 3) Enter a fake name and click on the "Create" button. This will add your name to the player.txt file with an initial score of 0.
@@ -12,18 +12,20 @@ This repository contains the code for a Jeopardy game web application. The game 
    
 <br />
 
-#Game Instructions
+# Game Instructions #
 1) On the left side of the screen, you will see the Jeopardy board with various categories and point values.
 2) Click on any number on the board to load a question (presented as an answer) on the right side of the screen.
 3) The choices for the question will be displayed as multiple-choice options.
 4) Click on one of the choices to submit your answer.
 5) The application will inform you if your answer is correct or incorrect.
-*If incorrect, it will display the correct answer, the amount lost, update your score, and refresh the leaderboard.
-*If correct, it will display a message confirming your correct answer, the amount won, update your score, and refresh the leaderboard.
+<br />
+   * If incorrect, it will display the correct answer, the amount lost, update your score, and refresh the leaderboard.
+<br />
+   * If correct, it will display a message confirming your correct answer, the amount won, update your score, and refresh the leaderboard.
 
 <br />
 
-#To Do
+# To Do #
 1) CSS: Enhance the appearance of the application by improving the styling.
 2) Create a GitHub repository to host the project code.
 3) Prepare PowerPoint slides to present the project.
@@ -36,7 +38,7 @@ Feel free to explore the code and make any necessary improvements or modificatio
 
 <br />
 
-#Contributors
+# Contributors #
 India Jackson
 Contributor 1
 Contributor 2
