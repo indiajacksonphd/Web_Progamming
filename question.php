@@ -204,24 +204,24 @@
     $answer = $questions[$category][$point]['answer'];
     
     ?>
-
+<!--
     <div class="question-container">
-      <div class="question"><?php echo $question; ?></div>
+      <div class="question"><?php //echo $question; ?></div>
     </div>
 
     <div class="choices-container">
-      <?php foreach ($choices as $choice) : ?>
+      <?php //foreach ($choices as $choice) : ?>
         <div class="choice">
           <form action="answer.php" method="POST">
-            <input type="hidden" name="category" value="<?php echo $category; ?>">
-            <input type="hidden" name="point" value="<?php echo $point; ?>">
-            <button type="submit" name="answer" value="<?php echo $choice; ?>">
-              <?php echo $choice; ?>
+            <input type="hidden" name="category" value="<?php //echo $category; ?>">
+            <input type="hidden" name="point" value="<?php //echo $point; ?>">
+            <button type="submit" name="answer" value="<?php //echo $choice; ?>">
+              <?php //echo $choice; ?>
             </button>
           </form>
         </div>
-      <?php endforeach; ?>
-    </div>
+      <?php //endforeach; ?>
+    </div>-->
   </div>
 </body>
 </html>
