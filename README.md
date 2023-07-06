@@ -17,7 +17,7 @@ This repository contains the code for a Jeopardy game web application. The game 
 2) Click on any number on the board to load a question (presented as an answer) on the right side of the screen.
 3) The choices for the question will be displayed as multiple-choice options.
 4) Click on one of the choices to submit your answer.
-5) The application will inform you if your answer is correct or incorrect.
+5) The application will inform you if your answer is correct or incorrect.<br />
 &nbsp;&nbsp;&nbsp;* If incorrect, it will display the correct answer, the amount lost, update your score, and refresh the leaderboard.
 &nbsp;&nbsp;&nbsp;* If correct, it will display a message confirming your correct answer, the amount won, update your score, and refresh the leaderboard.
 
