@@ -3,3 +3,12 @@ Mario, 500
 Sonic, -15300
 MegaMan, -5000
 Montae, 0
+Ron, 600
+Jack, 0
+Jack, 0
+Jack, 0
+Jack, 0
+Jack, 0
+Jack, 0
+Jack, 0
+Jack, 0

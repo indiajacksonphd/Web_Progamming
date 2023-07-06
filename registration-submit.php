@@ -1,3 +1,10 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Jeopardy Game</title>
+  <link rel="stylesheet" type="text/css" href="register_login.css?v=<?php echo time(); ?>">
+</head>
+<body>
 <?php
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Retrieve the submitted name from the form
@@ -10,20 +17,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     file_put_contents('players.txt', $playerEntry, FILE_APPEND | LOCK_EX);
 }
 ?>
-
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Registration Confirmation</title>
-    <!--<meta http-equiv="refresh" content="3;url=login.php">-->
-</head>
-<body>
+    <div  class = "group_names">
     <h1>Thank you for registering!</h1>
     <p>Now you can go back and login.</p>
     <p><a href = "login.php"> Click Here</a></p>
-    <?php
-    // Redirect to index.php after 3 seconds
-    //header("Refresh: 3; url=login.php");
-    ?>
+</div>
 </body>
 </html>

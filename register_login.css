@@ -1,0 +1,38 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*background-color:#250EC1;*/
+    
+    
+  }
+  body{
+    background-image: url('bg-clue-d.png');
+  }
+  
+  form {
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+  }
+  
+  .register-link {
+    text-align: center;
+    margin-top: 10px;
+  }
+.register{
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    text-align: center; /* Center the text horizontally */
+  }
+.group_names{
+    color: #C7C7C7;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    text-align: center; /* Center the text horizontally */
+}
+.group_names a{
+    color: #C7C7C7;
+}
