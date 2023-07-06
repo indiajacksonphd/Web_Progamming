@@ -1,3 +1,6 @@
+
+<img width="1721" alt="Screenshot 2023-07-06 at 1 05 20 PM" src="https://github.com/indiajacksonphd/Web_Progamming/assets/110256537/693d1ea0-31b4-4b5b-ad7d-79667b501a17">
+
 # Jeopardy Game - README #
 This repository contains the code for a Jeopardy game web application. The game allows users to register, play Jeopardy, and track their scores. Here's a guide on how to use the application:
 
