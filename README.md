@@ -18,8 +18,8 @@ This repository contains the code for a Jeopardy game web application. The game 
 3) The choices for the question will be displayed as multiple-choice options.
 4) Click on one of the choices to submit your answer.
 5) The application will inform you if your answer is correct or incorrect.<br />
-&nbsp;&nbsp;&nbsp;* If incorrect, it will display the correct answer, the amount lost, update your score, and refresh the leaderboard.<br />
-&nbsp;&nbsp;&nbsp;* If correct, it will display a message confirming your correct answer, the amount won, update your score, and refresh the leaderboard.
+&nbsp;&nbsp;&nbsp;a) If incorrect, it will display the correct answer, the amount lost, update your score, and refresh the leaderboard.<br />
+&nbsp;&nbsp;&nbsp;b) If correct, it will display a message confirming your correct answer, the amount won, update your score, and refresh the leaderboard.
 
 <br />
 
@@ -37,9 +37,9 @@ Feel free to explore the code and make any necessary improvements or modificatio
 <br />
 
 # Contributors #
-India Jackson
-Contributor 1
-Contributor 2
+1) India Jackson
+2) Contributor 1
+3) Contributor 2
 
 <br />
 
