@@ -1,0 +1,5 @@
+Zelda, 1200
+Mario, 500
+Sonic, -500
+MegaMan, -5000
+Montae, 0
