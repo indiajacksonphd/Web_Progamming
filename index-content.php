@@ -8,12 +8,12 @@
 <?php
 // Include the score_keeper.php file
 require_once 'score_keeper.php';
-//require_once 'login.php'
 
 // Get the current score
 $score = getScore();
 $getName = getName();
 ?>
+
 <div class="container">
 
     <div class="grid-container">
@@ -29,6 +29,7 @@ $getName = getName();
       <div class="question-point">
         <a href="question.php?category=Movies&point=200&return_to=index.php">$200</a>
       </div>
+
       <div class="question-point">
         <a href="question.php?category=Sports&point=200&return_to=index.php">$200</a>
       </div>

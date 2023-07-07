@@ -21,11 +21,6 @@ India Jackson, Kikiyin Ajibade, Natania Tedla and Asma Syeda
             <a href="register.php">Click here to register</a>
         </fieldset>
     </form>
-    
-    
-    <!--<div class="register-link">
-    
-  </div>-->
 </div>
 
 </body>

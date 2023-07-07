@@ -25,15 +25,12 @@
     // Display the result
     if ($isCorrect) {
       $result = 'correct';
-      //echo '<div class="result correct">Correct! Well done.</div>';
       addPoints($point);
       $username = getName();
       $newScore = getScore();
       updateScore($username, $newScore);
     } else {
-      $result = 'incorrect';
-      //echo '<div class="result incorrect">Incorrect! The correct answer is ' . $correctAnswer . '.</div>';
-      subtractPoints($point);
+      $result = 'incorrect';subtractPoints($point);
       $username = getName();
       $newScore = getScore();
       updateScore($username, $newScore);
@@ -46,7 +43,6 @@
     $username = getName();
     $newScore = getScore();
     updateScore($username, $newScore);
-
     ?>
     <div class="back-link">
       <a href="index.php">Back to Game</a>

@@ -4,9 +4,6 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    /*background-color:#250EC1;*/
-    
-    
   }
   body{
     background-image: url('bg-clue-d.png');
