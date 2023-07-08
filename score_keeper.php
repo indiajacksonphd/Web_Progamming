@@ -1,5 +1,4 @@
 <?php
-
 session_start();
 
 // Check if the score session variable is set
@@ -17,11 +16,6 @@ function addPoints($points) {
 function subtractPoints($points) {
   $_SESSION['score'] -= $points;
 }
-
-// Function to get the current score
-//function getScore() {
-  //return $_SESSION['score'];
-//}
 
 function getScore() {
   session_start();
@@ -69,6 +63,27 @@ function getLeaderboard()
     arsort($leaderboard);
 
     return $leaderboard;
+}
+
+function updateVisited($username, $category, $point)
+{
+    $filePath = 'visited.txt';
+
+    // Read the current contents of the file
+    $lines = file($filePath);
+
+    // Find the line containing the player's name
+    foreach ($lines as $index => $line) {
+        $playerInfo = explode(',', $line);
+        if (trim($playerInfo[0]) === $username) {
+            $playerInfo[0] = rtrim($playerInfo[0]) . ', ' . $category . '_' . $point;
+            $lines[$index] = implode(',', $playerInfo);
+            break;
+        }
+    }
+
+    // Write the updated contents back to the file
+    file_put_contents($filePath, implode('', $lines));
 }
 
 ?>

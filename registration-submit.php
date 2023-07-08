@@ -12,9 +12,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Create a new player entry with a score of 0
     $playerEntry = $name . ', 0' . PHP_EOL;
+    $visitedEntry = $name . ', category_point' . PHP_EOL;
 
     // Append the player entry to the players.txt file
     file_put_contents('players.txt', $playerEntry, FILE_APPEND | LOCK_EX);
+    file_put_contents('visited.txt', $visitedEntry, FILE_APPEND | LOCK_EX);
 }
 ?>
     <div  class = "group_names">

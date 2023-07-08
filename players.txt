@@ -1,14 +1,4 @@
-Zelda, 1200
-Mario, 500
-Sonic, -15300
-MegaMan, -5000
-Montae, 0
-Ron, -2000
-Jack, 0
-Jack, 0
-Jack, 0
-Jack, 0
-Jack, 0
-Jack, 0
-Jack, 0
-Jack, 0
+Zelda,0
+Mario,0
+Sonic,0
+Jewel, 0

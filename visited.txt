@@ -1,0 +1,8 @@
+Zelda,
+Mario,
+Sonic,
+MegaMan,
+Montae,
+Ron,
+India,
+Dasha,Jewel, category_point

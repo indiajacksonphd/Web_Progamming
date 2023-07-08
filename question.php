@@ -8,7 +8,6 @@
 
   <div class="container">
     <?php
-    // Define the questions
     $questions = [
       'Movies' => [
         200 => [
@@ -122,7 +121,7 @@
         ],
       ],
 
-      'TV Shows' => [
+      'TV' => [
         200 => [
             'question' => 'This TV show follows the lives of six friends living in New York City.',
             'choices' => ['What is Friends?', 'What is The Office?', 'What is Breaking Bad?'],
@@ -150,7 +149,7 @@
         ],
       ],
 
-      'SciFi Conventions' => [
+      'SciFi' => [
         200 => [
             'question' => 'This sci-fi convention is held annually in San Diego, California.',
             'choices' => ['What is Comic-Con?', 'What is Dragon Con?', 'What is Star Trek Convention?'],
@@ -189,39 +188,17 @@
 
     // Convert the choices array to a string representation
     $choicesString = implode('|', $choices);
-
-    //$question = $_GET['question'];
-    //$choices = $_GET['choices'];
-    // Retrieve the question for the given category and point
     
     // Redirect the user back to index.php with the desired parameters
-    header('Location: index.php?category=' . urlencode($category) . '&answer=' . urlencode($answer) . '&point=' . urlencode($point) . '&question=' . urlencode($question)  . '&choices=' . urlencode($choicesString)); //. '&answer=' . urlencode($answer)); //. '&choices=' . urlencode($choices));// . '&question=' . urlencode($question) . '&choices=' . urlencode($choices) . '&answer=' . urlencode($answer));
-    //header('Location: index.php?question=' . urlencode($question) . '&choices=' . urlencode($choices) . '&answer=' . urlencode($answer));
-    exit; // Make sure to exit the script after the redirect
+    header('Location: index.php?category=' . urlencode($category) . '&answer=' . urlencode($answer) . '&point=' . urlencode($point) . '&question=' . urlencode($question)  . '&choices=' . urlencode($choicesString));
+    exit;
     }
     $question = $questions[$category][$point]['question'];
     $choices = $questions[$category][$point]['choices'];
     $answer = $questions[$category][$point]['answer'];
-    
+  
     ?>
-<!--
-    <div class="question-container">
-      <div class="question"><?php //echo $question; ?></div>
-    </div>
 
-    <div class="choices-container">
-      <?php //foreach ($choices as $choice) : ?>
-        <div class="choice">
-          <form action="answer.php" method="POST">
-            <input type="hidden" name="category" value="<?php //echo $category; ?>">
-            <input type="hidden" name="point" value="<?php //echo $point; ?>">
-            <button type="submit" name="answer" value="<?php //echo $choice; ?>">
-              <?php //echo $choice; ?>
-            </button>
-          </form>
-        </div>
-      <?php //endforeach; ?>
-    </div>-->
   </div>
 </body>
 </html>

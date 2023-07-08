@@ -19,22 +19,27 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
                 session_start();
                 $_SESSION['username'] = $username;
                 $_SESSION['score'] = $score;
+
                 
-                break; // Exit the loop since we found the player
+                // Load the visited.txt file into a session variable
+                $visitedFile = file('visited.txt'); // Read the lines of the file into an array
+                
+                foreach ($visitedFile as $line) {
+                    $playerData = explode(',', $line);
+                    $playerName = trim($playerData[0]);
+                    
+                    if ($playerName === $username) {
+                        // Assign the visited list of the player to the session variable
+                        $_SESSION['visitedList'] = isset($playerData[1]) ? array_slice($playerData, 1) : array();
+                        $_SESSION['currentVisitedList'] = isset($playerData[1]) ? array_slice($playerData, 1) : array();
+                        break;
+                    }
+                }
+                header('Location: index.php');
+                exit;
             }
         }
-        
-        if (isset($_SESSION['username'])) {
-            // If the player is found, redirect to index.php
-            header('Location: index.php');
-            exit;
-        } else {
-            // If the player is not found, show an error message
-            echo 'Invalid username.';
-        }
-    } else {
-        // If the username is not provided, show an error message
-        echo 'Please enter a username.';
+       echo 'Invalid username.';
     }
 }
 ?>
