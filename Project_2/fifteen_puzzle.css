@@ -1,0 +1,515 @@
+body {
+  text-align: center;
+  font-size: 20px;
+  background-image: url('background.png');
+  background-size: cover;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  gap: 150px;
+  justify-content: center;
+  margin: auto;
+}
+
+#controls {
+  text-align: center;
+}
+
+.description-container {
+  border: 2px solid black;
+  padding: 20px;
+  max-width: 600px;
+  text-align: center;
+  font-size: 18px;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+
+
+hr {
+  margin-top: 30px;
+  border-width: 0;
+  border-top: 2px solid #222;
+  width: 80px;
+  margin-bottom: 0px;
+}
+
+.title {
+  margin: 20px 0;
+  font-family: sans-serif;
+  font-size: 50px;
+}
+
+#overlay-1,
+#overlay-2 {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: purple;
+  z-index: 2;
+  cursor: pointer;
+}
+
+#text-1,
+#text-2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 80px;
+  color: white;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.title-moves,
+#counter,
+.moves {
+  font-size: 20px;
+  font-weight: 800;
+  mix-blend-mode: darken;
+  /* opacity: 0.8; */
+  color: #8b0000;
+  letter-spacing: 4px;
+}
+
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  color: #212529;
+  text-align: center;
+  margin: 15px 0 0 0;
+  min-width: 100px;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.btn-outline-primary {
+  color: #ffffff;
+  border-color: #df273a;
+  background-color: #df273a;
+}
+.btn-outline-primary:hover {
+  background-color: #fff;
+  color: #df273a;
+  border-color: #df273a;
+}
+
+#game {
+  position: relative;
+  width: 410px;
+  height: 410px;
+  margin: 0 auto;
+  margin-top: 10px;
+  border: 8px solid rgb(0, 0, 0);
+  border-radius: 4px;
+}
+
+#game span {
+  position: absolute;
+  display: block;
+  width: 100px;
+  height: 100px;
+  border-radius: 4px;
+}
+
+#game span.number {
+  cursor: pointer;
+  font: bold 36px/80px Arial;
+  text-align: center;
+  text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: 2px solid black;
+}
+
+#game span.number:hover{
+  border-color: red; 
+  color: #006600; 
+  text-decoration: underline; 
+}
+
+#game span.empty {
+  background: transparent;
+}
+
+#game span.number.light {
+  background: rgb(141, 2, 2);
+}
+
+#game span.number.dark {
+  background: black;
+}
+
+#game.animate span {
+  -webkit-transition: 0.15s left, 0.15s top;
+  transition: 0.15s left, 0.15s top;
+}
+
+/* ************* Game pieces for Puzzle 1: 4 by 4 ***************************/
+/* Column 1 */
+#game span.number.piece_1-1{
+  background: url('image_1/bitfuul-images/image1x1.jpg');
+}
+
+#game span.number.piece_1-2 {
+  background: url('image_1/bitfuul-images/image2x1.jpg');
+}
+
+#game span.number.piece_1-3 {
+  background: url('image_1/bitfuul-images/image3x1.jpg');
+}
+
+#game span.number.piece_1-4 {
+  background: url('image_1/bitfuul-images/image4x1.jpg');
+}
+
+/* Column 2 */
+
+#game span.number.piece_1-5 {
+  background: url('image_1/bitfuul-images/image1x2.jpg');
+}
+
+#game span.number.piece_1-6 {
+  background: url('image_1/bitfuul-images/image2x2.jpg');
+}
+
+#game span.number.piece_1-7 {
+  background: url('image_1/bitfuul-images/image3x2.jpg');
+}
+
+#game span.number.piece_1-8 {
+  background: url('image_1/bitfuul-images/image4x2.jpg');
+}
+
+/* Column 3 */
+#game span.number.piece_1-9 {
+  background: url('image_1/bitfuul-images/image1x3.jpg');
+}
+#game span.number.piece_1-10 {
+  background: url('image_1/bitfuul-images/image2x3.jpg');
+}
+#game span.number.piece_1-11 {
+  background: url('image_1/bitfuul-images/image3x3.jpg');
+}
+#game span.number.piece_1-12 {
+  background: url('image_1/bitfuul-images/image4x3.jpg');
+}
+
+/* Column 4 */
+#game span.number.piece_1-13 {
+  background: url('image_1/bitfuul-images/image1x4.jpg');
+}
+#game span.number.piece_1-14 {
+  background: url('image_1/bitfuul-images/image2x4.jpg');
+}
+#game span.number.piece_1-15 {
+  background: url('image_1/bitfuul-images/image3x4.jpg');
+}
+#game span.number.piece_1-16 {
+  background: url('image_1/bitfuul-images/image4x4.jpg');
+}
+
+/* ************* Game pieces for Puzzle 2: 4 by 4 ***************************/
+/* Column 1 */
+#game span.number.piece_2-1 {
+  background: url('image_2/bitfuul-images/image1x1.jpg');
+}
+
+#game span.number.piece_2-2 {
+  background: url('image_2/bitfuul-images/image2x1.jpg');
+}
+
+#game span.number.piece_2-3 {
+  background: url('image_2/bitfuul-images/image3x1.jpg');
+}
+
+#game span.number.piece_2-4 {
+  background: url('image_2/bitfuul-images/image4x1.jpg');
+}
+
+
+/* Column 2 */
+#game span.number.piece_2-5 {
+  background: url('image_2/bitfuul-images/image1x2.jpg');
+}
+
+#game span.number.piece_2-6 {
+  background: url('image_2/bitfuul-images/image2x2.jpg');
+}
+
+#game span.number.piece_2-7 {
+  background: url('image_2/bitfuul-images/image3x2.jpg');
+}
+
+#game span.number.piece_2-8 {
+  background: url('image_2/bitfuul-images/image4x2.jpg');
+}
+
+/* Column 3 */
+#game span.number.piece_2-9 {
+  background: url('image_2/bitfuul-images/image1x3.jpg');
+}
+
+#game span.number.piece_2-10 {
+  background: url('image_2/bitfuul-images/image2x3.jpg');
+}
+
+#game span.number.piece_2-11 {
+  background: url('image_2/bitfuul-images/image3x3.jpg');
+}
+
+#game span.number.piece_2-12 {
+  background: url('image_2/bitfuul-images/image4x3.jpg');
+}
+
+
+/* Column 4 */
+#game span.number.piece_2-13 {
+  background: url('image_2/bitfuul-images/image1x4.jpg');
+}
+
+#game span.number.piece_2-14 {
+  background: url('image_2/bitfuul-images/image2x4.jpg');
+}
+
+#game span.number.piece_2-15 {
+  background: url('image_2/bitfuul-images/image3x4.jpg');
+}
+
+#game span.number.piece_2-16 {
+  background: url('image_2/bitfuul-images/image4x4.jpg');
+}
+
+
+/* ************* Game pieces for Puzzle 3: 4 by 4 ***************************/
+/* Column 1 */
+#game span.number.piece_3-1 {
+  background: url('image_3/bitfuul-images/image1x1.jpg');
+}
+
+#game span.number.piece_3-2 {
+  background: url('image_3/bitfuul-images/image2x1.jpg');
+}
+
+#game span.number.piece_3-3 {
+  background: url('image_3/bitfuul-images/image3x1.jpg');
+}
+
+#game span.number.piece_3-4 {
+  background: url('image_3/bitfuul-images/image4x1.jpg');
+}
+
+
+/* Column 2 */
+#game span.number.piece_3-5 {
+  background: url('image_3/bitfuul-images/image1x2.jpg');
+}
+
+#game span.number.piece_3-6 {
+  background: url('image_3/bitfuul-images/image2x2.jpg');
+}
+
+#game span.number.piece_3-7 {
+  background: url('image_3/bitfuul-images/image3x2.jpg');
+}
+
+#game span.number.piece_3-8 {
+  background: url('image_3/bitfuul-images/image4x2.jpg');
+}
+
+
+/* Column 3 */
+
+#game span.number.piece_3-9 {
+  background: url('image_3/bitfuul-images/image1x3.jpg');
+}
+#game span.number.piece_3-10 {
+  background: url('image_3/bitfuul-images/image2x3.jpg');
+}
+#game span.number.piece_3-11 {
+  background: url('image_3/bitfuul-images/image3x3.jpg');
+}
+#game span.number.piece_3-12 {
+  background: url('image_3/bitfuul-images/image4x3.jpg');
+}
+
+/* Column 4 */
+#game span.number.piece_3-13 {
+  background: url('image_3/bitfuul-images/image1x4.jpg');
+}
+
+#game span.number.piece_3-14 {
+  background: url('image_3/bitfuul-images/image2x4.jpg');
+}
+
+#game span.number.piece_3-15 {
+  background: url('image_3/bitfuul-images/image3x4.jpg');
+}
+
+#game span.number.piece_3-16 {
+  background: url('image_3/bitfuul-images/image4x4.jpg');
+}
+
+
+
+/* ************* Game pieces for Puzzle 4: 4 by 4 ***************************/
+/* Column 1 */
+#game span.number.piece_4-1 {
+  background: url('image_4/bitfuul-images/image1x1.jpg');
+}
+
+#game span.number.piece_4-2 {
+  background: url('image_4/bitfuul-images/image2x1.jpg');
+}
+
+#game span.number.piece_4-3 {
+  background: url('image_4/bitfuul-images/image3x1.jpg');
+}
+
+#game span.number.piece_4-4 {
+  background: url('image_4/bitfuul-images/image4x1.jpg');
+}
+
+/* Column 2 */
+#game span.number.piece_4-5 {
+  background: url('image_4/bitfuul-images/image1x2.jpg');
+}
+
+#game span.number.piece_4-6 {
+  background: url('image_4/bitfuul-images/image2x2.jpg');
+}
+
+#game span.number.piece_4-7 {
+  background: url('image_4/bitfuul-images/image3x2.jpg');
+}
+
+#game span.number.piece_4-8 {
+  background: url('image_4/bitfuul-images/image4x2.jpg');
+}
+
+/* Column 3 */
+#game span.number.piece_4-9 {
+  background: url('image_4/bitfuul-images/image1x3.jpg');
+}
+
+#game span.number.piece_4-10 {
+  background: url('image_4/bitfuul-images/image2x3.jpg');
+}
+
+#game span.number.piece_4-11 {
+  background: url('image_4/bitfuul-images/image3x3.jpg');
+}
+
+#game span.number.piece_4-12 {
+  background: url('image_4/bitfuul-images/image4x3.jpg');
+}
+
+/* Column 4 */
+#game span.number.piece_4-13 {
+  background: url('image_4/bitfuul-images/image1x4.jpg');
+}
+
+#game span.number.piece_4-14 {
+  background: url('image_4/bitfuul-images/image2x4.jpg');
+}
+
+#game span.number.piece_4-15 {
+  background: url('image_4/bitfuul-images/image3x4.jpg');
+}
+
+#game span.number.piece_4-16 {
+  background: url('image_4/bitfuul-images/image4x4.jpg');
+}
+
+
+
+/* ************* Game pieces for Puzzle 5: 4 by 4 ***************************/
+/* Column 1 */
+#game span.number.piece_5-1 {
+  background: url('image_5/bitfuul-images/image1x1.jpg');
+}
+
+#game span.number.piece_5-2 {
+  background: url('image_5/bitfuul-images/image2x1.jpg');
+}
+
+#game span.number.piece_5-3 {
+  background: url('image_5/bitfuul-images/image3x1.jpg');
+}
+
+#game span.number.piece_5-4 {
+  background: url('image_5/bitfuul-images/image4x1.jpg');
+}
+
+/* Column 2 */
+#game span.number.piece_5-5 {
+  background: url('image_5/bitfuul-images/image1x2.jpg');
+}
+
+#game span.number.piece_5-6 {
+  background: url('image_5/bitfuul-images/image2x2.jpg');
+}
+
+#game span.number.piece_5-7 {
+  background: url('image_5/bitfuul-images/image3x2.jpg');
+}
+
+#game span.number.piece_5-8 {
+  background: url('image_5/bitfuul-images/image4x2.jpg');
+}
+
+
+/* Column 3 */
+#game span.number.piece_5-9 {
+  background: url('image_5/bitfuul-images/image1x3.jpg');
+}
+
+#game span.number.piece_5-10 {
+  background: url('image_5/bitfuul-images/image2x3.jpg');
+}
+
+#game span.number.piece_5-11 {
+  background: url('image_5/bitfuul-images/image3x3.jpg');
+}
+
+#game span.number.piece_5-12 {
+  background: url('image_5/bitfuul-images/image4x3.jpg');
+}
+
+/* Column 4 */
+#game span.number.piece_5-13 {
+  background: url('image_5/bitfuul-images/image1x4.jpg');
+}
+
+#game span.number.piece_5-14 {
+  background: url('image_5/bitfuul-images/image2x4.jpg');
+}
+
+#game span.number.piece_5-15 {
+  background: url('image_5/bitfuul-images/image3x4.jpg');
+}
+
+#game span.number.piece_5-16 {
+  background: url('image_5/bitfuul-images/image4x4.jpg');
+}
+

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'unsafe-inline' *.gsu.edu; media-src lgphycloudlogs1.s3.amazonaws.com;">
+
+    <title>TileSlide Mastermind - Fifteen Puzzle</title>
+
+    <link rel="stylesheet" href="fifteen_puzzle.css" />
+  </head>
+
+    <body>
+
+      <div class="container">
+        <header>
+
+          <h1 class="title"> TileSlide Mastermind </h1>
+          <h2>Fifteen Puzzle</h2>
+
+          <div class="description-container">
+            The Fifteen Puzzle, also known as the "15-puzzle," is similar to the Eight Puzzle but slightly more complex. It is played on a 4x4 grid with fifteen numbered tiles and one empty space. The tiles are shuffled, and the objective is to slide the tiles into the empty space to rearrange them into their original order. The goal is to have the tiles arranged from 1 to 15, with the empty space in the last position.
+            <p>This game includes the follow:</p>
+            1) If you complete the puzzle, you will get a congratulations animation from us!
+            <br>
+            2) When you click on a tile, you will see a slide transition!
+            <br>
+            3) When you pick a puzzle, your timer will start and your moves will be tracked!
+            <br>
+            4) Click Play Sound to hear some old school retro gamin music!
+            <br>
+            5) Choose from multiple background photos (famous gaming characters!)
+            <br>
+            6) Too hard? Try the <a href = "eight_puzzle.html">Eight Puzzle here!</a>
+
+            <p>
+              Have Fun!!
+            </p>
+
+            <p>Team Members: Kikiyin Ajibade, India Jackson, Natania Tedla, and Asma Syeda</p>
+            
+          </div>
+
+          <br>
+
+          <button class="btn btn-outline-primary" onclick="playSound()">Play Sound</button>
+          <button class="btn btn-outline-primary" onclick="stopSound()">Stop Sound</button>
+          <p></p>
+
+          Choose your board below!
+
+        </header>
+      
+        <div id="puzzle-buttons">
+          <button class="btn btn-outline-primary" onclick="puzzleOne()">Arthur Morgan</button>
+          <button class="btn btn-outline-primary" onclick="puzzleTwo()">Chun Li</button>
+          <button class="btn btn-outline-primary" onclick="puzzleThree()">Mario</button>
+          <button class="btn btn-outline-primary" onclick="puzzleFour()">Link</button>
+          <button class="btn btn-outline-primary" onclick="puzzleFive()">MegaMan</button>
+        </div>
+
+        <p></p>
+
+        <div class="top">
+
+          <span class="timer-container">
+            <span id="timer">00:00</span>
+          </span>
+
+          <span class="moves-container">
+            Moves: <span id="counter">0</span>
+          </span>
+
+        </div>
+
+      </div>
+      
+
+      <section>
+        <div id="game"></div>
+
+        <div id="controls">
+          <div id="solve"></div>
+          <button class="btn btn-outline-primary" id="shuffle">Reset</button>
+        </div>
+
+      </section>
+
+      <div id="overlay-2" onclick="endCongrats()">
+        <div id="text-2">YAY!!, You Won! Wanna Play again!!</div>
+      </div>
+
+      <script src="fifteen_puzzle.js"></script>
+
+  </body>
+</html>

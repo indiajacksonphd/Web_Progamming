@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'unsafe-inline' *.gsu.edu; media-src lgphycloudlogs1.s3.amazonaws.com;">
+
+    <title>TileSlide Mastermind - Eight Puzzle</title>
+
+    <link rel="stylesheet" href="eight_puzzle.css" />
+  </head>
+    
+  <body>
+    
+    <div class="container">
+      
+        <header>
+            <h1 class="title"> TileSlide Mastermind </h1>  
+            <h2>Eight Puzzle</h2>
+
+            <div class="description-container">
+                The Eight Puzzle is a classic sliding puzzle consisting of a 3x3 grid with eight numbered tiles and an empty space. The tiles are initially randomly arranged, and the goal is to slide the tiles one at a time to rearrange them into their original order. The only legal moves are to slide a tile into the empty space, and the puzzle is considered solved when the tiles are in the order 1 to 8, with the empty space in the last position.
+                <p>This game includes the follow:</p>
+                1) If you complete the puzzle, you will get a congratulations animation from us!
+                <br>
+                2) When you click on a tile, you will see a slide transition!
+                <br>
+                3) When you pick a puzzle, your timer will start and your moves will be tracked!
+                <br>
+                4) Click Play Sound to hear some old school retro gamin music!
+                <br>
+                5) Choose from multiple background photos (famous gaming characters!)
+                <br>
+                6) Want more of a challenge? Try the <a href = "fifteen_puzzle.html">Fifteen Puzzle here!</a>
+
+                <p>Have Fun!!</p>
+                <p>Team Members: Kikiyin Ajibade, India Jackson, Natania Tedla, and Asma Syeda</p>
+            </div>
+
+            <br>
+            <button class="btn btn-outline-primary" onclick="playSound()">Play Sound</button>
+            <button class="btn btn-outline-primary" onclick="stopSound()">Stop Sound</button>
+            <p></p>
+            Choose your board below!
+        </header>
+
+      
+        <div id="puzzle-buttons">
+          <button class="btn btn-outline-primary" onclick="puzzleSix()">Arthur Morgan</button>
+          <button class="btn btn-outline-primary" onclick="puzzleSeven()">Chun Li</button>
+          <button class="btn btn-outline-primary" onclick="puzzleEight()">Mario</button>
+          <button class="btn btn-outline-primary" onclick="puzzleNine()">Link</button>
+          <button class="btn btn-outline-primary" onclick="puzzleTen()">MegaMan</button>
+        </div>
+
+        <p></p>
+
+        <div class="top">
+            <span class="timer-container">
+                <span id="timer">00:00</span>
+            </span>
+              
+            <span class="moves-container">
+                Moves: <span id="counter">0</span>
+            </span>
+        </div>
+
+    </div>
+      
+
+    <section>
+        <div id="game2"></div>
+
+        <div id="controls">
+          <div id="solve"></div>
+          <button class="btn btn-outline-primary" id="shuffle">Reset</button>
+        </div>
+
+    </section>
+      
+    <div id="overlay-2" onclick="endCongrats()">
+        <div id="text-2">YAY!!, You Won! Wanna Play again!!</div>
+    </div>
+
+    <script src="eight_puzzle.js"></script>
+    
+  </body>
+</html>
